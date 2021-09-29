@@ -9,4 +9,5 @@ values, the relationships among them, and the functions or operations that can b
 the data.
 
 
-[Linked List](src/linked-list)
+[Linked List](tree/main/src/linked_list)
+
