@@ -8,6 +8,4 @@ be accessed and modified efficiently. More precisely, a data structure is a coll
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
 
-
-[Linked List](tree/main/src/linked_list)
-
+* [Linked List](src/linked-list)
