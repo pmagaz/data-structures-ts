@@ -10,7 +10,7 @@ export default class Queue<T> implements iQueue<T> {
   private bucket: bucket<T> = [];
 
   public enqueue(data: T): void {
-    this.bucket.enqueue(data);
+    this.bucket.push(data);
   }
 
   public dequeue(): T | undefined {
