@@ -15,3 +15,4 @@ Data structures serve as the basis for abstract data types (ADT). The ADT define
 
 * [Linked List](src/linked_list)
 * [Hash Table](src/hash_table)
+* [Queue](src/queue)
