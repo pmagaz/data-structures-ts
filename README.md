@@ -1,4 +1,5 @@
 #  TypeScript Data Structures
+
 Popular data structures written in TypeScript for educational purposes.
 
 ## Data Structures
@@ -15,5 +16,7 @@ Data structures serve as the basis for abstract data types (ADT). The ADT define
 
 * [Linked List](src/linked_list)
 * [Hash Table](src/hash_table)
-* [Heap](src/heap)
+* [Max Heap](src/heap)
+* [Min Heap](src/heap)
 * [Queue](src/queue)
+* [Priority Queue](src/queue)
