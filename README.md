@@ -16,7 +16,7 @@ Data structures serve as the basis for abstract data types (ADT). The ADT define
 
 * [Linked List](src/linked_list)
 * [Hash Table](src/hash_table)
-* [Binary Search Tree](src/bst)
+* [Binary Search Tree](src/binary_search_tree)
 * [Heap](src/heap)
   * [Max Heap](src/heap)
   * [Min Heap](src/heap)
