@@ -1,0 +1,15 @@
+{
+  "name": "data-structures-ts",
+  "version": "0.1.0",
+  "author": "pmagaz",
+  "license": "MIT",
+  "engines": {
+    "node": "^14"
+  },
+  "scripts": {
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "typescript": "4.4.4"
+  }
+}

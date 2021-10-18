@@ -1,0 +1,38 @@
+name: build
+on:
+  pull_request:
+    branches:
+      - main
+env:
+  CI: true
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js latest
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "14"
+      - name: Install dependencies and generate cache
+        uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn install --frozen-lockfile
+
+      - name: Link dependencies and Lerna bootstrap
+        run: yarn setup-env
+
+      - name: Build packages
+        run: yarn build:packages
+
+      - name: Tests & Coverage
+        run: yarn test:coverage
+
+      - name: Lint Code
+        run: yarn lint:ts
+
+      - name: Lint CSS
+        run: yarn lint:css
