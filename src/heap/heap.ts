@@ -5,7 +5,5 @@ export interface iHeap<T> {
   getRightChild(index: number): number;
   getParent(index: number): number;
   swap(a: number, b: number): void;
-  insert(item: T): void;
   heapify(index: number): void;
-  peek(): T;
 }

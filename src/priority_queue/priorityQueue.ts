@@ -1,5 +1,5 @@
 
-import { heap, iHeap } from '../heap/heap.ts';
+import { heap, iHeap } from '../heap/heap';
 
 class PriorityNode<T>  {
   constructor(
@@ -17,7 +17,7 @@ class PriorityQueue<T> implements iHeap<T> {
   public getParent = (index: number) => Math.floor((index - 1) / 2);
   public peek = () => this.heap[0];
 
-  public insert(priority: number, item: T): void {
+  public insert(priority: number, item: T): PriorityNode<T> {
     let node = new PriorityNode(priority, item);
     this.heap.push(node);
     let index = this.heap.length - 1;
@@ -30,6 +30,7 @@ class PriorityQueue<T> implements iHeap<T> {
         index = parentIndex
       } else break;
     }
+    return node;
   }
 
   public extractMax() {

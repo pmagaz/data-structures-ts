@@ -1,4 +1,4 @@
-import { heap, iHeap } from './heap.ts';
+import { heap, iHeap } from './heap';
 
 class MaxHeap<T> implements iHeap<T> {
   private heap: heap<T> = new Array();
@@ -18,7 +18,7 @@ class MaxHeap<T> implements iHeap<T> {
     }
   }
 
-  public insert(item: T): void {
+  public insert(item: T): T {
     this.heap.push(item);
     let index = this.heap.length - 1;
     let parentIndex = this.getParent(index);
@@ -28,8 +28,8 @@ class MaxHeap<T> implements iHeap<T> {
         traverse(parentIndex)
       }
     }
-
     traverse(index);
+    return item;
   }
 
   public extractMax() {

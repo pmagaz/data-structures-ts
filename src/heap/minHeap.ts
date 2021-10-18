@@ -1,4 +1,4 @@
-import { heap, iHeap } from './heap.ts';
+import { heap, iHeap } from './heap';
 
 class MinHeap<T> implements iHeap<T>{
   private heap: heap<T> = new Array();
@@ -8,7 +8,7 @@ class MinHeap<T> implements iHeap<T>{
   public peek = () => this.heap[0];
   public dump = (): heap<T> => this.heap;
 
-  public insert(item: T) {
+  public insert(item: T): T {
     this.heap.push(item);
     let index = this.heap.length - 1;
     let parentIndex = this.getParent(index);
@@ -16,6 +16,7 @@ class MinHeap<T> implements iHeap<T>{
       this.swap(index, parentIndex);
       index = parentIndex;
     }
+    return item;
   }
 
   public extractMin() {
