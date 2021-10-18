@@ -1,11 +1,10 @@
 name: build
-on:
-  pull_request:
-    branches:
-      - main
-env:
-  CI: true
 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   build:
     name: build
@@ -22,17 +21,5 @@ jobs:
         with:
           install-command: yarn install --frozen-lockfile
 
-      - name: Link dependencies and Lerna bootstrap
-        run: yarn setup-env
-
-      - name: Build packages
-        run: yarn build:packages
-
-      - name: Tests & Coverage
-        run: yarn test:coverage
-
-      - name: Lint Code
-        run: yarn lint:ts
-
-      - name: Lint CSS
-        run: yarn lint:css
+      - name: Build 
+        run: yarn build
