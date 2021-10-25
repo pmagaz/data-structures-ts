@@ -15,8 +15,9 @@ Data structures serve as the basis for abstract data types (ADT). The ADT define
 ## Data Structures in TypeScript
 
 * [Linked List](src/linked_list)
-* [Hash Table](src/hash_table)
 * [Binary Search Tree](src/binary_search_tree)
+* [Graph](src/graph)
+* [Hash Table](src/hash_table) (in progress)
 * [Heap](src/heap)
   * [Max Heap](src/heap)
   * [Min Heap](src/heap)
