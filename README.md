@@ -21,6 +21,7 @@ Data structures serve as the basis for abstract data types (ADT). The ADT define
 * [Heap](src/heap)
   * [Max Heap](src/heap)
   * [Min Heap](src/heap)
+* [Stack](src/stack) (in progress)
 * [Queue](src/queue)
   * [Queue](src/queue)
   * [Priority Queue](src/priority_queue)
